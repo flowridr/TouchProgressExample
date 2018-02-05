@@ -1,25 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0F0F0F"
     tools:context="rocks.tap.touchprogressexample.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TouchProgress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="40dp"/>
 
     <rocks.tap.touchprogress.TouchProgress
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        app:donut_circle_starting_degree="270"
+        app:donut_finished_color="@color/colorAccent"
+        app:donut_finished_stroke_width="4dp"
+        app:donut_max="0"
+        app:donut_progress="0"
+        app:donut_text_color="@color/colorAccent"
+        app:donut_text_size="36sp"
+        app:donut_unfinished_color="@color/colorAccent"
+        app:donut_unfinished_stroke_width="1dp"
         />
 
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
