@@ -1,4 +1,9 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'rocks.tap.touchprogress'
+version = '1.0.0'
 
 android {
     compileSdkVersion 26
@@ -22,6 +27,50 @@ android {
         }
     }
 
+}
+
+task generateSourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier 'sources'
+}
+
+task generateJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath()
+            .join(File.pathSeparator))
+}
+
+task generateJavadocsJar(type: Jar) {
+    from generateJavadocs.destinationDir
+    classifier 'javadoc'
+}
+
+generateJavadocsJar.dependsOn generateJavadocs
+
+artifacts {
+    archives generateJavadocsJar
+    archives generateSourcesJar
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+    pkg {
+        repo = 'maven'
+        name = 'TouchProgress' // the name of the package in BinTray
+
+        version {
+            name = 'touchprogress' // the name of your library project
+            desc = 'A dual mode touchable progress bar for Android'
+            released  = new Date()
+            vcsTag = '1.0.0' // the version
+        }
+
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/flowridr/TouchProgressExample.git' // your GitHub repo
+        websiteUrl = 'https://github.com/flowridr/TouchProgressExample' // your website or whatever has documentation
+    }
+    configurations = ['archives']
 }
 
 dependencies {
