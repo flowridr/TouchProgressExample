@@ -21,16 +21,33 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
         app:donut_circle_starting_degree="270"
-        app:donut_finished_color="@color/colorAccent"
+        app:donut_finished_color="#0abab5"
         app:donut_finished_stroke_width="4dp"
-        app:donut_max="0"
-        app:donut_progress="0"
-        app:donut_text_color="@color/colorAccent"
-        app:donut_text_size="36sp"
-        app:donut_unfinished_color="@color/colorAccent"
+        app:donut_max="100"
+        app:donut_progress="50"
+        app:donut_text_color="#efefef"
+        app:donut_text_size="24sp"
+        app:donut_unfinished_color="#0abab5"
         app:donut_unfinished_stroke_width="1dp"
         />
+
+    <rocks.tap.touchprogress.TouchProgress
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        app:donut_circle_starting_degree="270"
+        app:donut_finished_color="#0abab5"
+        app:donut_finished_stroke_width="4dp"
+        app:donut_max="100"
+        app:donut_progress="50"
+        app:donut_text_color="#efefef"
+        app:donut_text_size="24sp"
+        app:donut_unfinished_color="#0abab5"
+        app:donut_unfinished_stroke_width="1dp"
+        />
+
 
 
 </LinearLayout>
