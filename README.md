@@ -1,11 +1,11 @@
 # TouchProgressExample
 A dual mode progress bar for Android
 
-#Screenshot
+# Screenshot
 
-![Alt text](/../screenshots/path/Screenshot_1518160399.png?raw=true)
+![There should be image here](https://raw.github.com/flowridr/TouchProgressExample/screenshots/Screenshot_1518160399.png?raw=true)
 
-#How to use 
+# How to use 
 
 1. Add following to your layout:
 
