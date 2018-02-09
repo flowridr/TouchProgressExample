@@ -3,7 +3,7 @@ A dual mode progress bar for Android
 
 #Screenshot
 
-![Alt text](/../<branch name>/path/to/image.png?raw=true)
+![Alt text](/../screenshots/path/Screenshot_1518160399.png?raw=true)
 
 #How to use 
 
