@@ -3,12 +3,13 @@ A dual mode progress bar for Android
 
 # Screenshot
 
-![There should be image here](https://raw.github.com/flowridr/TouchProgressExample/screenshots/Screenshot_1518160399.png?raw=true)
+![There should be image here](https://user-images.githubusercontent.com/6240723/36016803-4f9a24ee-0da7-11e8-8609-0095d3e6ba66.png?raw=true)
 
 # How to use 
 
 1. Add following to your layout:
 
+```
     <rocks.tap.touchprogress.TouchProgress
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -23,3 +24,4 @@ A dual mode progress bar for Android
         app:donut_unfinished_color="#0abab5"
         app:donut_unfinished_stroke_width="1dp"
         />
+```
